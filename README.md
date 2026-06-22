@@ -1,3 +1,7 @@
+<p>
+    <img src="aldl_ecu_sim.jpg" width="780"/>
+</p>
+
 ## What's in the bundle
 
 - `ALDL_ECU_Simulator_GUI-<version>.exe` — GUI version (recommended)
@@ -29,7 +33,7 @@ ALDL_ECU_Simulator_cli.exe /?          (show all options)
 | Parameter      | Value                            |
 |----------------|----------------------------------|
 | Baud rate      | 8192 (ALDL standard)             |
-| Profile        | VR Commodore 3.8L V6             |
+| Profile        | Commodore 3.8L V6                |
 | Engine RPM     | 800 (idle)                       |
 | Coolant        | 90 deg C                         |
 | Intake air     | 25 deg C                         |
@@ -84,7 +88,3 @@ To test calibration reads:
 
 This software is released under the MIT Licence. See `licence.txt` for
 the full text and third-party dependency attributions.
-
-<p>
-    <img src="aldl_ecu_sim.jpg" width="520"/>
-</p>
