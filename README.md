@@ -65,7 +65,7 @@ The simulator works without a `.bin` file (Mode 4 reads return zeros).
 To test calibration reads:
 
 1. Click **Load .bin...** in the GUI
-2. Pick an OSE .bin file (32 KB)
+2. Pick a .bin file (32 KB)
 3. Send a Mode 4 read command from the scan tool
 
 ## Troubleshooting
