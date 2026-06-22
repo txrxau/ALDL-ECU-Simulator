@@ -1,9 +1,3 @@
-# Usage
-
-How to run the simulator once you have the release artefacts. The
-repo's [README.md](README.md) covers building from source and
-architecture; this file covers what end users need to know.
-
 ## What's in the bundle
 
 - `ALDL_ECU_Simulator_GUI-<version>.exe` — GUI version (recommended)
@@ -90,3 +84,7 @@ To test calibration reads:
 
 This software is released under the MIT Licence. See `licence.txt` for
 the full text and third-party dependency attributions.
+
+<p>
+    <img src="aldl_ecu_sim.jpg" width="520"/>
+</p>
