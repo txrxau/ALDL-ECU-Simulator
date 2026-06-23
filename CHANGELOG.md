@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2026-06-23
+
+### Added
+
+- **`memcal_db` module** — parses `MEMCALS.md` (183 entries:
+  VN/VP, VR, VS, VT, VX) and exposes `lookup_by_bcc`,
+  `lookup_by_filename`, `lookup_by_pid`, `iter`.
+  - BCC column shows the full 8-character code for entries
+    with a known suffix, the 4-letter prefix otherwise.
+- **Memcal toolbar** (one row above the bin row): `[Search]`
+  opens a searchable browser over the database (filter
+  box, striped grid, click-to-select details pane);
+  `[Info]` looks the loaded bin up by its 4-letter prefix
+  and shows the matched entry plus the bin's own program
+  ID and firmware.
+
+### Changed
+
+- **Bin row no longer shows the program-ID / version tag.**
+  File name, size, `Load .bin...`, and `Clear` only. ID and
+  version moved to the `Info` popup.
+
 ## [0.1.2] - 2026-06-23
 
 ### Added
@@ -186,11 +208,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`Calibration::program_id() / firmware_major() / firmware_minor()`.**
   Read the 2-byte BE program ID at offset 0 and the major/minor
   version bytes at offsets 2-3 of the loaded `.bin`. OSE V1.12
-  bins have program ID `0x0012`.
-- **GUI: program ID tag in the bin row.** Shows `ID 0x0012 v1.1`
-  next to the loaded `.bin` filename. Blue when the ID matches the
-  expected OSE value; amber warning for any other ID; yellow
-  for short images.
+  bins have program ID `0x0012`. (Removed from the bin row in
+  0.1.3 — see Changed notes there.)
+- **GUI: program ID tag in the bin row.** *(Removed in 0.1.3.)*
+  Showed `ID 0x0012 v1.1` next to the loaded `.bin` filename,
+  blue for the expected OSE `$12P` ID and amber for anything
+  else.
 - **GUI: "Mode 4 actuator overrides" section.** Displays the current
   spark override (Normal or forced value) with a "Clear (M4_Norm)"
   button, plus a "Reset all (M4_Norm)" button that clears TCC, fan,

@@ -1,7 +1,3 @@
-<p>
-   <img src="aldl_ecu_sim.jpg" width="900"/>
-</p>
-
 # Usage
 
 How to run the simulator once you have the release artefacts. The
@@ -10,8 +6,8 @@ architecture; this file covers what end users need to know.
 
 ## What's in the bundle
 
-- `ALDL_ECU_Simulator_GUI-<version>.exe` — GUI version (recommended)
-- `ALDL_ECU_Simulator_cli-<version>.exe` — Command-line version
+- `ALDL_ECU_Simulator_GUI-0.1.3.exe` — GUI version (recommended)
+- `ALDL_ECU_Simulator_cli-0.1.3.exe` — Command-line version
 - `licence.txt` — MIT licence terms
 - `README.txt` — this file's plain-text source
 
@@ -20,7 +16,7 @@ architecture; this file covers what end users need to know.
 ### GUI (recommended for first-time use)
 
 1. Plug in a USB-to-serial adapter (FTDI, CH340, etc.)
-2. Double-click `ALDL_ECU_Simulator_GUI-<version>.exe`
+2. Double-click `ALDL_ECU_Simulator_GUI-0.1.3.exe`
 3. Pick the COM port from the dropdown
 4. Click **Open**
 5. Point TunerPro RT (or your scan tool) at the other end of the
@@ -71,8 +67,15 @@ The simulator works without a `.bin` file (Mode 4 reads return zeros).
 To test calibration reads:
 
 1. Click **Load .bin...** in the GUI
-2. Pick a 32 KB calibration .bin file
+2. Pick a 32 KB calibration `.bin` file
 3. Send a Mode 4 read command from the scan tool
+
+Once a `.bin` is loaded, the **Info** button on the bin row
+pops a window with the matched entry from `MEMCALS.md` (era,
+BCC, program ID, year, engine, trans, ECM, comments). Lookup
+is by the first 4 alphabetic characters of the file name.
+Custom or dealer-only tunes (no matching prefix) show a
+"no match" notice.
 
 ## Troubleshooting
 
