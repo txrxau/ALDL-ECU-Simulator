@@ -1,6 +1,8 @@
-<p>
-    <img src="aldl_ecu_sim.jpg" width="780"/>
-</p>
+# Usage
+
+How to run the simulator once you have the release artefacts. The
+repo's [README.md](README.md) covers building from source and
+architecture; this file covers what end users need to know.
 
 ## What's in the bundle
 
@@ -33,7 +35,7 @@ ALDL_ECU_Simulator_cli.exe /?          (show all options)
 | Parameter      | Value                            |
 |----------------|----------------------------------|
 | Baud rate      | 8192 (ALDL standard)             |
-| Profile        | Commodore 3.8L V6                |
+| Profile        | VR Commodore 3.8L V6             |
 | Engine RPM     | 800 (idle)                       |
 | Coolant        | 90 deg C                         |
 | Intake air     | 25 deg C                         |
@@ -65,7 +67,7 @@ The simulator works without a `.bin` file (Mode 4 reads return zeros).
 To test calibration reads:
 
 1. Click **Load .bin...** in the GUI
-2. Pick a .bin file (32 KB)
+2. Pick a 32 KB calibration .bin file
 3. Send a Mode 4 read command from the scan tool
 
 ## Troubleshooting
