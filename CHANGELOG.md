@@ -10,22 +10,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **`memcal_db` module** — parses `MEMCALS.md` (183 entries:
-  VN/VP, VR, VS, VT, VX) and exposes `lookup_by_bcc`,
-  `lookup_by_filename`, `lookup_by_pid`, `iter`.
-  - BCC column shows the full 8-character code for entries
-    with a known suffix, the 4-letter prefix otherwise.
+  VN/VP, VR, VS, VT, VX). `lookup_by_bcc`,
+  `lookup_by_filename`, `lookup_by_pid`, `iter`. BCC
+  column shows the full 8-character code for entries with
+  a known suffix, the 4-letter prefix otherwise.
 - **Memcal toolbar** (one row above the bin row): `[Search]`
-  opens a searchable browser over the database (filter
-  box, striped grid, click-to-select details pane);
-  `[Info]` looks the loaded bin up by its 4-letter prefix
-  and shows the matched entry plus the bin's own program
-  ID and firmware.
+  opens a searchable browser over the database. `[Info]`
+  (on the bin row, next to `Clear`) looks the loaded bin
+  up by its 4-letter prefix.
+- **Wire-signal invert + echo suppression** under the port
+  row. `Invert: TX / RX` are mutually-exclusive radio
+  buttons (XOR each byte with 0xFF at the port boundary,
+  default both off). `Echo Suppress` is a separate
+  checkbox (default off) for passive 1-wire adapters;
+  dropped bytes are logged as `Direction::Echo` for
+  verification.
+- **`Set Faults` scenario** — drives the per-frame auto-DTC
+  scan to a known multi-code state (CTS 145°C, MAT -45°C,
+  MAP 8 kPa, O2 stuck + slow, RPM 2250 / TPS 0% correlation).
+  No `state.malfs` is set directly; the scan + correlation
+  check are the test target. Useful for verifying the
+  debounce timers and the tune-gated enable bitfield work
+  end-to-end.
 
 ### Changed
 
 - **Bin row no longer shows the program-ID / version tag.**
-  File name, size, `Load .bin...`, and `Clear` only. ID and
-  version moved to the `Info` popup.
+  File name, size, `Load .bin...`, `Clear`, `Info` only.
+  ID and version moved to the `Info` popup.
+- **Total: 168 unit tests across 12 source files + 4
+  integration tests** in `tests/integration.rs`.
 
 ## [0.1.2] - 2026-06-23
 
