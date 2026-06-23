@@ -1,3 +1,7 @@
+<p>
+   <img src="aldl_ecu_sim.jpg" width="900"/>
+</p>
+
 # Usage
 
 How to run the simulator once you have the release artefacts. The
