@@ -2,10 +2,6 @@
    <img src="aldl_ecu_sim.jpg" width="900"/>
 </p>
 
-# Usage
-
-How to run the simulator.
-
 ## What's in the bundle
 
 - `ALDL_ECU_Simulator_GUI-0.1.3.exe` — GUI version (recommended)
