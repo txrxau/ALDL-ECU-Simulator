@@ -4,9 +4,7 @@
 
 # Usage
 
-How to run the simulator once you have the release artefacts. The
-repo's [README.md](README.md) covers building from source and
-architecture; this file covers what end users need to know.
+How to run the simulator.
 
 ## What's in the bundle
 
