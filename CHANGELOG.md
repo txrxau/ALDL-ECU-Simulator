@@ -98,6 +98,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   low) entirely — counters don't advance, bits aren't
   touched. MALF 21/22 can still be set/cleared by log DTC
   columns and manual MALF grid clicks.
+- **Default log playback rate is now slow (1/6 realtime).**
+  `Playback::DEFAULT_RATE = 1.0 / 6.0`. New `Playback::new()`
+  and `Playback::load()` both reset the rate to this value,
+  so a fresh app or a freshly loaded log starts at 1/6
+  realtime — the user can see playback step at a glance.
+  The GUI's Slow/Fast preset buttons (relocated to the
+  transport row, right of the Loop toggle, with a small
+  spacer) switch between `DEFAULT_RATE` and `1.0`; the
+  active preset is shown with a `●` prefix and a background
+  fill so the current speed is visible at a glance.
+- **2 new unit tests** for the default-rate behaviour
+  (`new_playback` returns `DEFAULT_RATE`, `load` resets
+  to `DEFAULT_RATE`).
+- **Total: 161 unit tests across 11 source files + 4
+  integration tests** in `tests/integration.rs`.
 
 ### Added
 
