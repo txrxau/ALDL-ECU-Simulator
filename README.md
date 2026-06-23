@@ -4,14 +4,14 @@
 
 ## What's in the bundle
 
-- `ALDL_ECU_Simulator_GUI-0.1.3.exe` — GUI version (recommended)
+- `ALDL_ECU_Simulator_GUI-0.1.3.exe` — GUI version
 - `ALDL_ECU_Simulator_cli-0.1.3.exe` — Command-line version
 - `licence.txt` — MIT licence terms
 - `README.txt` — this file's plain-text source
 
 ## Quick start
 
-### GUI (recommended for first-time use)
+### GUI
 
 1. Plug in a USB-to-serial adapter (FTDI, CH340, etc.)
 2. Double-click `ALDL_ECU_Simulator_GUI-0.1.3.exe`
